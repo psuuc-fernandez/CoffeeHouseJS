@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      </head>
+          <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
+    <title>Register | Cooffee House</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-6 side-image">
+                    <div class="text">
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                     <div class="input-box">
+                        <header>Register</header>
+                        <div class="input-field">
+                            <label for="Name">Name</label>
+                            <input type="text" class="input" id="name" required autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="text" class="input" id="email" required autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                            <label for="bday">Birthday</label>
+                            <input type="date" class="input" id="bday" required autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                            <label for="add">Complete Address</label>
+                            <input type="text" class="input" id="add" required autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Number</label>
+                            <input type="tel" class="input" id="phone" required autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                            <select>
+                              <option hidden>Gender</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </div>
+                          <div class="signin">
+                            <input type="submit" class="submit" value="Register">
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const profileLink = document.getElementById('profileLink');
+    const registeredInformation = {
+        name: "",       // Store the registered name
+        email: "",      // Store the registered email
+        bday: "",       // Store the registered birthday
+        address: "",    // Store the registered address
+        phone: "",      // Store the registered phone number
+        gender: ""      // Store the registered gender
+    };
+
+    // Event listener for the "Profile" link
+    profileLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+
+        // Check if all information is registered
+        if (
+            registeredInformation.name &&
+            registeredInformation.email &&
+            registeredInformation.bday &&
+            registeredInformation.address &&
+            registeredInformation.phone &&
+            registeredInformation.gender
+        ) {
+            // Display the registered information
+            alert(
+                "Name: " + registeredInformation.name + "\n" +
+                "Email: " + registeredInformation.email + "\n" +
+                "Birthday: " + registeredInformation.bday + "\n" +
+                "Address: " + registeredInformation.address + "\n" +
+                "Phone: " + registeredInformation.phone + "\n" +
+                "Gender: " + registeredInformation.gender
+            );
+        } else {
+            // Prompt the user to complete the registration first
+            alert("Please complete the registration first.");
+        }
+    });
+
+    // Update the registered information when the form is submitted
+    const registerForm = document.querySelector('.input-box');
+
+    registerForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const bday = document.getElementById('bday').value;
+        const address = document.getElementById('add').value;
+        const phone = document.getElementById('phone').value;
+        const gender = document.getElementById('gender').value;
+
+        // Update the registered information
+        registeredInformation.name = name;
+        registeredInformation.email = email;
+        registeredInformation.bday = bday;
+        registeredInformation.address = address;
+        registeredInformation.phone = phone;
+        registeredInformation.gender = gender;
+
+        // Reset the form
+        registerForm.reset();
+    });
+</script>

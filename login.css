@@ -1,0 +1,213 @@
+
+
+*
+{
+    font-family: 'Oswald', sans-serif;
+}
+
+.wrapper
+{
+    background-image: url(Login.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+padding: 0 20px 0 20px;
+}
+header
+{
+    font-size: 54px;
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.side-image
+{
+    background-image: url(kape.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+img
+{
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.row
+{
+    width: 900px;
+    height: 550px;
+    
+}
+
+.text
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+
+.text p
+{
+    color: #603809;
+    font-size: 35px;
+    margin-bottom: 350px;
+}
+
+i
+{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.right
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.input-box
+{
+    width: 330px;
+margin-left: 450px;
+margin-top: 70px;
+}
+
+.input-box header{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.input-field
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input
+{
+    height: 25px;
+    width: 100%;
+    background: #D9D9D9;
+    outline: none;
+    margin-bottom: 20px;
+    color: #603809;
+    border: none; /* Removed stroke */
+    border-radius: 5px;
+}
+input:hover,
+input:focus {
+    border: 1px solid #603809; /* Stroke color */
+}
+
+.submit
+{
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 45px;
+    background: #603809;
+    border-radius: 30px;
+    transition: .4s;
+    color: white;
+}
+
+.submit:hover
+{
+    background:#BE9B7B;
+    color: white;
+}
+
+.signin
+{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    .side-image{
+    border-radius: 10px 10px 0 0 ;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p,i
+    {
+        font-size: 17px;
+    }
+    .row{
+    max-width: 420px;
+width: 100%;    
+}
+}
+.input-field button {
+    position: absolute;
+    top: 100%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 12px; 
+    padding: 5px 10px; 
+    border: none;
+    outline: none;
+    transition: .4s;
+    background: white;
+  }
+
+  .input-field button:hover
+  {
+      background: #BE9B7B;
+      color: white;
+  }
+
+  .signin
+  {
+      text-align: center;
+      font-size: small;
+      margin-top: 25px;
+  }
+  span a
+  {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  transition: .5s;
+  }
+  
+  span a:hover
+  {
+      text-decoration: underline;
+      color: #BE9B7B;
+  }
+
+  .forgot
+  {
+    margin-left: 250px;
+    font-size: 13px;
+  }

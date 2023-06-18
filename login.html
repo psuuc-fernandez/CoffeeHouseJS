@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      </head>
+          <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
+    <title>Log In | Cooffee House</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-6 side-image">
+                    <div class="text">
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="input-box">
+                      <header>Welcome Back</header>
+                      <form id="loginForm">
+                        <div class="input-field">
+                          <label for="email">Email</label>
+                          <input type="text" class="input" id="email" required autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                          <label for="password">Password</label>
+                          <input type="password" class="input" id="password" required>
+                        </div>
+                        <div class="forgot">
+                          <span><a href="password.html">Forgot Password</a></span>
+                        </div>
+                        <div class="signin">
+                          <input type="submit" class="submit" value="Log In">
+                        </div>
+                        <div class="signin">
+                          <span>Don't Have an Account? <a href="signup.html">Sign Up Here</a></span>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // JavaScript code to handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      // Perform login validation here
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+  
+      // Replace the validation logic below with your own code
+      // Example validation (replace with your own logic)
+      if (email === 'lfernandez_21ur0093@psu.edu.ph' && password === 'Leyy090702') {
+        // Successful login, redirect to the dashboard or perform other actions
+        alert('Login successful! Redirecting to the dashboard...');
+        window.location.href = 'dashboard.html'; // Replace 'dashboard.html' with the URL of your dashboard page
+      } else {
+        // Invalid credentials, display an error message or perform other actions
+        alert('Invalid email or password. Please try again.');
+      }
+    });
+  </script>
